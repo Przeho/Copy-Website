@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-image: url(images/background/1.jpg);
+  background-repeat: no-repeat;
+  animation: back 30s infinite;
+  background-size: cover;
+  font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+}
+header {
+  background-color: rgba(0, 0, 0, 0.3);
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+/* logo section */
+header #logo > img {
+  width: 2vw;
+  opacity: unset;
+  margin-right: 0.5rem;
+}
+header #logo {
+  display: flex;
+  width: min-content;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+/* logo section */
+
+/* search section */
+.search {
+  display: grid;
+  grid-template-columns: 1fr 20fr;
+  width: 60vw;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.search__button {
+  background-color: white;
+  background-size: 75%;
+  min-width: 20%;
+  aspect-ratio: 2/1.5;
+  border: none;
+  min-height: 100%;
+  cursor: pointer;
+}
+.search__button > img {
+  width: 40%;
+  margin-top: 0.2rem;
+}
+.search__input {
+  background-color: white;
+  border: none;
+  border-radius: 0;
+  color: #5a5a5a;
+  width: 100%;
+}
+.search__input:focus {
+  outline: none;
+}
+/* search section */
+
+/* signup section */
+#section-signup {
+  display: flex;
+  gap: 5%;
+}
+#section-signup .button {
+  width: 8vw;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+#section-signup .button__login {
+  width: 5vw;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+}
+#section-signup .button__signup {
+  background-color: white;
+  min-height: 5vh;
+  border-radius: 5px;
+  transition: color 0.15s ease-in-out;
+  border: none;
+}
+#section-signup .button__signup:hover {
+  color: grey;
+}
+/* signup section */
+
+/* main section */
+main {
+  min-height: 82vh;
+  text-align: center;
+  padding: 3rem 14rem 2rem;
+  position: relative;
+}
+#text-section > h1,
+p {
+  color: white;
+}
+h1 {
+  font-size: 56px;
+  font-weight: 600;
+}
+p {
+  margin-top: 2rem;
+  font-size: 26px;
+  font-weight: 600;
+}
+.main__button {
+  min-width: 25%;
+  min-height: 10vh;
+  border: none;
+  outline: none;
+  background-color: white;
+  margin-top: 3rem;
+  border-radius: 5px;
+  transition: color 0.15s ease-in-out;
+  cursor: pointer;
+}
+.main__button:hover {
+  color: grey;
+}
+.main__footer {
+  font-size: 10px;
+  font-weight: 100;
+  margin: 0;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* main section */
+
+/* footer section */
+footer {
+  background-color: black;
+  height: 8vh;
+  color: white;
+  font-size: 0.6rem;
+  color: #5a5a5a;
+}
+ul {
+  height: 100%;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+li {
+  transition: color 0.15s ease-in-out;
+  cursor: pointer;
+}
+ul li:hover {
+  color: white;
+}
+li > svg {
+  width: 15px;
+  aspect-ratio: 1/1;
+}
+path {
+  transition: color 0.15s ease-in-out;
+}
+li > svg:hover path {
+  fill: white;
+}
+
+/* footer section */
+
+/* animation */
+@keyframes back {
+  0% {
+    background-image: url(images/background/1.jpg);
+  }
+  25% {
+    background-image: url(images/background/2.jpg);
+  }
+  50% {
+    background-image: url(images/background/3.jpg);
+  }
+  75% {
+    background-image: url(images/background/4.jpg);
+  }
+  100% {
+    background-image: url(images/background/5.jpg);
+  }
+}
+/* animation */

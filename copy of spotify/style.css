@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  min-width: 100vw;
+  height: 100vh;
+}
+#left {
+  background-color: black;
+  min-width: 20vw;
+  height: 100vh;
+  padding: 1.5rem;
+}
+#left > img {
+  width: 60%;
+}
+#left__buttons {
+  color: #5a5a5a;
+  margin-top: 2rem;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+}
+.buttons:hover {
+  color: whitesmoke;
+  transition: color 0.2s ease-in-out;
+}
+#left__buttons img {
+  width: 10%;
+}
+.icon__playlist {
+  width: 10%;
+  aspect-ratio: 1/1;
+  background-color: darkgray;
+  position: relative;
+  border-radius: 2px;
+  transition: 0.2s ease-in-out;
+}
+
+.firstline {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 70%;
+  background-color: black;
+}
+.firstline::after {
+  content: "";
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: black;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+#left__playlist {
+  color: #5a5a5a;
+  margin-top: 3rem;
+}
+#right {
+  min-width: 80vw;
+  height: 100vh;
+  background-color: #1c1c1c;
+  overflow-y: scroll;
+}
+#right header {
+  width: 100%;
+  min-height: 10vh;
+  background-color: #101010;
+  position: sticky;
+  top: 0;
+  display: flex;
+  z-index: 999;
+}
+#right main {
+  width: 100%;
+  min-height: 90vh;
+  background-color: #1d1d1d;
+}
+.left_navbar {
+  min-width: 70%;
+  min-height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1%;
+  position: relative;
+  padding-right: 2%;
+}
+.left_navbar::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 60%;
+  width: 100%;
+  border-right: 2px solid darkgray;
+}
+.left_navbar a {
+  text-decoration: none;
+  color: #5a5a5a;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.left_navbar a:hover {
+  transform: scale(1.1);
+  color: whitesmoke;
+}
+
+.right_navbar {
+  min-width: 30%;
+  min-height: 100%;
+}
+.right_navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.register {
+  color: #5a5a5a;
+  font-weight: 800;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.signup {
+  background-color: white;
+  width: 35%;
+  aspect-ratio: 5/2;
+  border-radius: 25px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #101010;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.register:hover {
+  transform: scale(1.1);
+  color: whitesmoke;
+}
+.signup:hover {
+  transform: scale(1.1);
+  background-color: rgb(209, 208, 208);
+}
+.first-header {
+  display: flex;
+  padding: 1.5rem;
+  justify-content: space-between;
+}
+.first-header a:nth-of-type(1) {
+  font-weight: 800;
+  font-size: 2rem;
+  text-decoration: none;
+  color: whitesmoke;
+}
+.first-header a:nth-of-type(1):hover {
+  text-decoration-line: underline;
+}
+.first-header a:nth-of-type(2) {
+  font-weight: 800;
+  align-self: end;
+  color: darkgray;
+  text-decoration: none;
+}
+.first-header a:nth-of-type(2):hover {
+  text-decoration-line: underline;
+}
+.koncetrancja__conteiner {
+  width: 100%;
+  display: flex;
+  padding: 0.5rem 2rem;
+  justify-content: space-between;
+}
+
+.box {
+  width: 18%;
+  aspect-ratio: 3/5;
+  background-color: #181818;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.box-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1.1;
+  background-image: url(image/album_icon.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+.box-img::after {
+  content: "";
+  width: 35%;
+  aspect-ratio: 1/1;
+  background-color: green;
+  position: absolute;
+  border-radius: 100px;
+  bottom: -5%;
+  right: 5%;
+  background-image: url(image/play-solid.svg);
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: 55% 50%;
+  opacity: 0;
+  animation: albumbutton-in .5s linear;
+}
+.box:hover .box-img::after{
+  animation: albumbutton-out .5s linear forwards;
+
+}
+.box:hover{
+  background-color: hsla(0,0%,100%,.07);
+}
+
+
+
+@keyframes albumbutton-in{
+  0%{
+    opacity: 1;
+    transform: translateY(-20px);
+
+  }
+  50%{
+    opacity: 0.2;
+    transform: translateY(20px);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  }
+
+@keyframes albumbutton-out{
+0%{
+  opacity: 0;
+}
+50%{
+  opacity: 0.8;
+  transform: translateY(-20px);
+}
+100%{
+  opacity: 1;
+  transform: translateY(-20px);
+}
+}

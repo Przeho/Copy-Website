@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>copy of uber</title>
+  </head>
+  <body>
+    <header>
+      <div class="left-side">
+        <div class="left-nav">
+          <label for="toggle">
+            <div class="toggle--line"></div>
+            <div class="toggle--line"></div>
+            <div class="toggle--line"></div>
+          </label>
+          <input type="checkbox" id="toggle" class="visually-hidden" />
+          <div class="hiden-menu">
+            <div class="hiden-menu--buttons">
+              <button class="buttons--sign-up">Zarejestruj się</button>
+              <button class="buttons--sign-in">Zaloguj się</button>
+            </div>
+            <div class="hiden-menu--list">
+              <ul>
+                <li>Utwórz konto firmowe</li>
+                <li>Dodaj swoją restaurację</li>
+                <li>Zarjestruj się aby realizowac dostawy</li>
+              </ul>
+            </div>
+            <div class="hiden-menu--footer">
+              <div class="footer--text">
+                <p>W aplikzacji wybór jest jeszcze większy</p>
+              </div>
+              <div class="footer--buttons">
+                <button class="iphone">iPhone</button>
+                <button class="android">Android</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="uber">Uber</p>
+        <p class="eats">Eats</p>
+      </div>
+      <div class="search-bar">
+        <input
+          type="text"
+          class="search-bar--bar"
+          placeholder="Wpisz Adres dostawy"
+        />
+        <input type="submit" class="search-bar--submit" value="!" />
+      </div>
+      <div class="right-nav">
+        <button class="right-nav--sign-in">Zaloguj się</button>
+        <button class="right-nav--sign-up">Zarejestruj się</button>
+      </div>
+    </header>
+    <main>
+      <div class="main--hero-section">
+        <h1>Zamów jedzenie pod drzwi</h1>
+        <div class="hero-section--search">
+          <div class="section--search-bar">
+            <input
+              type="search"
+              class="section--search-bar-bar"
+              placeholder="Wpisz adres dostawy"
+            />
+            <input
+              type="submit"
+              class="section--search-bar-location"
+              value="!"
+            />
+          </div>
+          <select name="delivery" class="section--search-bar-delivery">
+            <option class="delivery-now">Dostarcz teraz</option>
+            <option class="delivery-later">Zaplanuj na później</option>
+          </select>
+          <button class="section--search-bar-submit">
+            Wyszukaj restaruację
+          </button>
+        </div>
+        <p class="main--hero-section-footer">
+          <span>Zaloguj się, </span>aby korzystać z ostatnich adresów
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
