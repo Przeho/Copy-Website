@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  height: 500vh;
+}
+
+header {
+  background-color: #131921;
+  width: 100%;
+  min-height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 0.5rem;
+}
+
+#header__logo {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#header__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50vw;
+  min-height: 5vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#header__search .header__search-bar {
+  border: none;
+  width: 95%;
+  padding: 0 1rem;
+}
+#header__search .header__search-bar:focus {
+  border: none;
+  outline: none;
+}
+#header__search .header__search-submit {
+  background-color: #febd69;
+  width: 5%;
+  border: none;
+  outline: none;
+  background-image: url(../img/search-button.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+
+#header__localisation p,
+.header__menu-zwrot p,
+.header__menu-sign p {
+  color: white;
+}
+#header__localisation p:nth-child(2),
+.header__menu-zwrot p:nth-child(2),
+.header__menu-sign p:nth-child(2) {
+  font-weight: bolder;
+}
+
+#header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5%;
+  width: 25%;
+}
+#header__menu .header__menu-koszyk p {
+  color: white;
+  font-weight: 600;
+}
+
+nav {
+  background-color: #232f3e;
+  min-height: 5vh;
+  padding: 0 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#nav__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#nav__left .nav__left-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 5vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.3rem;
+}
+#nav__left .nav__left-menu p {
+  color: white;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+#nav__left .nav__left-menu:hover {
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+.menu-hamb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3px;
+}
+.menu-hamb .hamb {
+  width: 15px;
+  height: 4px;
+  background-color: white;
+}
+
+#nav__left .nav__left-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  color: white;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+#nav__left li {
+  min-height: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+#nav__left li:hover {
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 0.25rem;
+}
+
+#nav__right {
+  padding: 0.3rem;
+}
+#nav__right p {
+  color: white;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#nav__right p svg {
+  margin-left: 0.5rem;
+}
+#nav__right:hover {
+  border: 1px solid white;
+  border-radius: 2px;
+  padding: 0.25rem;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/background.jpg");
+  background-size: contain;
+  background-repeat: reapet-y;
+  padding: 15rem 1.5rem;
+}
+
+.main__tample {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 2%;
+  grid-row-gap: 50px;
+}
+.main__tample .box1 h3 {
+  font-size: 1.4rem;
+}
+.main__tample .box1 .box1_products {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px;
+  row-gap: 50px;
+}
+.main__tample .box1 .box1_products .products {
+  height: 70px;
+  background-image: url("../img/notebook.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.main__tample .box1 .box1_products .products::after {
+  content: "Produkt";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+.main__tample .main__tample-box {
+  background-color: white;
+  width: 100%;
+  height: 60vh;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.main__tample .main__tample-box a {
+  margin-top: 3rem;
+  padding-left: 1rem;
+  text-decoration: none;
+}
+.main__tample .box4 {
+  width: 100%;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40% 60%;
+  grid-row-gap: 2%;
+}
+.main__tample .box4 .box4_1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: white;
+  padding: 1rem;
+}
+.main__tample .box4 .box4_1 p {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.main__tample .box4 .box4_1 button {
+  background-color: #ffd814;
+  border: none;
+  outline: none;
+  height: 6vh;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.main__tample .box4 .box4_1 button:hover {
+  background-color: #ccad11;
+}
+.main__tample .box4 .box4_2 {
+  background-image: url("../img/box4_2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main__tample .box2 {
+  padding: 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main__tample .box2 img {
+  width: 250px;
+}/*# sourceMappingURL=main.css.map */
