@@ -10,4 +10,6 @@ A repository of pages that I copied while learning html and css.
 
 #Yelp, #Uber, #Genius
     -Pages where I generally practiced html and css.
-    
+
+#Amazon
+    -Project where i first time used scss during study
